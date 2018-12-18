@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<title>消防安全知识</title>
+	<script>
+		function isWechat(){
+			var ua = window.navigator.userAgent.toLowerCase();
+			if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+				return true;
+			}else{
+				return false;
+			}	
+		}
+		//只允许微信打开
+		if(!isWechat()){
+			alert('请用微信客户端打开');
+			window.location.href='http://www.vlinr.com/';
+		}
+	</script>
+	<!--需要加密以及只能用微信客户端打开，否则代码窃取-->
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id="game"></div>
+	<script type="text/javascript" src="assets/lib/phaser.min.js" ></script>
+	<script type="text/javascript" src="assets/lib/jquery-1.10.1.min.js" ></script>
+	<script type="text/javascript" src="assets/js/fireFighting.js" ></script>
+</body>
+</html>
